@@ -1,4 +1,4 @@
-# city_project
+# CITY PROJECT
 Este repositorio tiene el código del proyecto "nombre", en el cual se hará ...
 
 ## Integrantes:
