@@ -1,13 +1,19 @@
-# TC2008B - Multi-Agents and Computer Graphics
+# TC2008B - Multi-Agents and Computer Graphics project: Modelación de una ciudad
 
-Course material for the Multi-Agents and Computer Graphics course.
+El reto consiste en proponer una solución al problema de movilidad urbana en México, mediante un enfoque que reduzca la congestión vehicular al simular de manera gráfica el tráfico, representando la salida de un sistema multi agentes.
 
-By the end of this course, you will create a traffic simulation where each car is an individual agent traversing a city alongside other autonomous agents.
+Imagina una solución que implemente una de las siguientes estrategias de ejemplo:
 
-![Sample Project](./docs/Images/Sample%20Simulation.png)
-*Sample simulation created by Mateo Herrera and Gerardo Gutiérrez.*
+Controlar y asignar los espacios de estacionamiento disponible en una zona de la ciudad, evitando así que los autos estén dando vueltas para encontrar estacionamiento.
+Compartir tu vehículo con otras personas. Aumentando la ocupación de los vehículos, reduciría el número de vehículos en las calles.
+Tomar las rutas menos congestionadas. Quizás no más las cortas, pero las rutas con menos tráfico. Más movilidad, menos consumo, menos contaminación.
+Que permita a los semáforos coordinar sus tiempos y, así, reducir la congestión de un cruce. O, quizás, indicar en qué momento un vehículo va a cruzar una intersección y que de esta forma, el semáforo puede determinar el momento y duración de la luz verde.
 
+Con base en el código de la clase: https://github.com/octavio-navarro/TC2008B
 ---
+## Hecho por:
+- Daniela Angulo
+- Uriel Anzures
 
 ## 📋 Table of Contents
 
@@ -19,10 +25,6 @@ By the end of this course, you will create a traffic simulation where each car i
 6. [License](#license)
 
 ---
-
-## About the Course
-
-This repository serves as the central hub for resources, code examples, and documentation for **TC2008B**. It focuses on the intersection of Multi-Agent Systems (using Python/Mesa) and Computer Graphics (using WebGL).
 
 ## Repository Structure
 
