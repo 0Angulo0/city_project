@@ -1,69 +1,70 @@
-# TC2008B - Multi-Agents and Computer Graphics project: Modelación de una ciudad
+# TC2008B: Modelación de una ciudad
 
-El reto consiste en proponer una solución al problema de movilidad urbana en México, mediante un enfoque que reduzca la congestión vehicular al simular de manera gráfica el tráfico, representando la salida de un sistema multi agentes.
+El reto consiste en proponer una solución al problema de movilidad urbana en México, mediante un enfoque que reduzca la congestión vehicular al simular de manera gráfica el tráfico, representando la salida de un sistema multiagentes.
 
 Imagina una solución que implemente una de las siguientes estrategias de ejemplo:
 
-Controlar y asignar los espacios de estacionamiento disponible en una zona de la ciudad, evitando así que los autos estén dando vueltas para encontrar estacionamiento.
-Compartir tu vehículo con otras personas. Aumentando la ocupación de los vehículos, reduciría el número de vehículos en las calles.
-Tomar las rutas menos congestionadas. Quizás no más las cortas, pero las rutas con menos tráfico. Más movilidad, menos consumo, menos contaminación.
-Que permita a los semáforos coordinar sus tiempos y, así, reducir la congestión de un cruce. O, quizás, indicar en qué momento un vehículo va a cruzar una intersección y que de esta forma, el semáforo puede determinar el momento y duración de la luz verde.
+- Controlar y asignar los espacios de estacionamiento disponibles en una zona de la ciudad, evitando así que los autos estén dando vueltas para encontrar estacionamiento.
+- Compartir tu vehículo con otras personas. Al aumentar la ocupación de los vehículos, se reduciría el número de vehículos en las calles.
+- Tomar las rutas menos congestionadas. Quizás no las más cortas, pero sí las rutas con menos tráfico. Más movilidad, menos consumo, menos contaminación.
+- Que los semáforos coordinen sus tiempos y, así, reduzcan la congestión de un cruce. O, quizás, indicar en qué momento un vehículo va a cruzar una intersección para que el semáforo pueda determinar el momento y la duración de la luz verde.
 
 Con base en el código de la clase: https://github.com/octavio-navarro/TC2008B
+
 ---
+
 ## Hecho por:
 - Daniela Angulo
 - Uriel Anzures
 
-## 📋 Table of Contents
+## 📋 Contenido
 
-1. [About the Course](#about-the-course)
-2. [Repository Structure](#repository-structure)
-3. [Prerequisites](#prerequisites)
-4. [Installation & Setup](#installation--setup)
-5. [References](#references)
-6. [License](#license)
+1. [Estructura del repositorio](#estructura-del-repositorio)
+2. [Requisitos previos](#requisitos-previos)
+3. [Instalación y configuración](#instalación-y-configuración)
+4. [Referencias](#referencias)
+5. [Licencia](#licencia)
 
 ---
 
-## Repository Structure
+## Estructura del repositorio
 
-The repository contains the following material:
+El repositorio contiene el siguiente material:
 
 * **📂 [Documents](./Documents)**
-    Contains presentations, cheat sheets, and theoretical resources.
+    Presentaciones, hojas de referencia (cheat sheets) y recursos teóricos.
 * **📂 [AgentsVisualization](./AgentsVisualization)**
-    A WebGL project used to visualize the random agents model using HTML/JS instead of the standard Mesa visualization.
+    Proyecto en WebGL que visualiza el modelo de agentes aleatorios con HTML/JS en lugar de la visualización estándar de Mesa.
 * **📂 [mesaExamples](./mesaExamples)**
-    Basic Mesa examples, including the Random Model, Forest Fire, and the City Model.
+    Ejemplos básicos de Mesa, incluyendo el modelo aleatorio (Random Model), el incendio forestal (Forest Fire) y el modelo de la ciudad (City Model).
 * **📂 [CompetitionSite](./CompetitionSite)**
-    Resources regarding the course competition.
+    Recursos sobre la competencia del curso.
 
 ---
 
-## Prerequisites
+## Requisitos previos
 
-Before setting up the environment, ensure you have the following installed:
+Antes de configurar el entorno, asegúrate de tener instalado lo siguiente:
 
-* **Python 3.13+**: [Download Python](https://www.python.org/downloads/)
-* **Git**: [Download Git](https://git-scm.com/downloads)
+* **Python 3.13+**: [Descargar Python](https://www.python.org/downloads/)
+* **Git**: [Descargar Git](https://git-scm.com/downloads)
 
 ---
 
-## Installation & Setup
+## Instalación y configuración
 
-We recommend using a Python virtual environment to manage dependencies. This keeps your project isolated from other Python projects on your system.
+Recomendamos usar un entorno virtual de Python para manejar las dependencias. Así el proyecto queda aislado de otros proyectos de Python en tu sistema.
 
-### 1. Clone the Repository
+### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/octavio-navarro/TC2008B.git
-cd TC2008B
-````
+git clone https://github.com/0Angulo0/city_project.git
+cd city_project
+```
 
-### 2\. Create the Virtual Environment
+### 2. Crear el entorno virtual
 
-Create a virtual environment named `.agents`:
+Crea un entorno virtual llamado `.agents`:
 
 **Windows / macOS / Linux:**
 
@@ -71,7 +72,7 @@ Create a virtual environment named `.agents`:
 python -m venv .agents
 ```
 
-### 3\. Activate the Environment
+### 3. Activar el entorno
 
 **Windows (PowerShell):**
 
@@ -79,7 +80,7 @@ python -m venv .agents
 .\.agents\Scripts\Activate
 ```
 
-**Windows (Command Prompt):**
+**Windows (Símbolo del sistema / CMD):**
 
 ```cmd
 .\.agents\Scripts\activate.bat
@@ -91,36 +92,36 @@ python -m venv .agents
 source .agents/bin/activate
 ```
 
-*You will know the environment is active when you see `(.agents)` at the start of your command line.*
+*Sabrás que el entorno está activo cuando veas `(.agents)` al inicio de la línea de comandos.*
 
-### 4\. Install Dependencies
+### 4. Instalar las dependencias
 
-Once the environment is active, install the required packages.
+Con el entorno activo, instala los paquetes necesarios.
 
-**Option A: Using requirements file (Recommended)**
+**Opción A: Con el archivo de requerimientos (recomendada)**
 
 ```bash
-pip install -r agents_requirements.txt
+pip install -r requirements.txt
 ```
 
-**Option B: Manual Installation**
-If you prefer to install the packages manually, run:
+**Opción B: Instalación manual**
+
+Si prefieres instalar los paquetes a mano, ejecuta:
 
 ```bash
 pip install -U "mesa[all]"
 pip install flask flask_cors
 ```
 
------
+---
 
-## References
+## Referencias
 
-  * **Mesa**: [Official Documentation](https://mesa.readthedocs.io/en/stable/index.html)
-  * **Flask**: [User Guide](https://flask.palletsprojects.com/en/3.0.x/)
+  * **Mesa**: [Documentación oficial](https://mesa.readthedocs.io/en/stable/index.html)
+  * **Flask**: [Guía de usuario](https://flask.palletsprojects.com/en/3.0.x/)
 
------
+---
 
-## License
+## Licencia
 
-This project is licensed under the [MIT License](https://www.google.com/search?q=./LICENSE).
-
+Este proyecto está bajo la [Licencia MIT](./LICENSE).
