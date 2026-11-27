@@ -24,19 +24,16 @@ class Traffic_Light(FixedAgent):
     """
     Traffic light. Where the traffic lights are in the grid.
     """
+    #& crea un semáforo
+    #in: el modelo, su celda, si empieza en verde y cada cuántos steps cambia de color
+    #out: nada
     def __init__(self, model, cell, state = False, timeToChange = 10):
-        """
-        Creates a new Traffic light.
-        Args:
-            model: Model reference for the agent
-            cell: The initial position of the agent
-            state: Whether the traffic light is green or red
-            timeToChange: After how many step should the traffic light change color 
-        """
         super().__init__(model)
         self.cell = cell
         self.state = state
         self.timeToChange = timeToChange
+        #dirección del flujo se deduce de las calles vecinas después de leer el mapa 
+        self.direction = None
 
     def step(self):
         """ 
