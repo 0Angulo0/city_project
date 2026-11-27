@@ -31,14 +31,14 @@ Con base en el código de la clase: https://github.com/octavio-navarro/TC2008B
 
 El repositorio contiene el siguiente material:
 
-* **📂 [Documents](./Documents)**
-    Presentaciones, hojas de referencia (cheat sheets) y recursos teóricos.
+* **📂 [mesaExamples/trafficBase](./mesaExamples/trafficBase)**
+    Modelo de la ciudad en Mesa (Python): agentes (vehículos, semáforos, calles, edificios y destinos) y mapas de la ciudad en `city_files/`, descritos por `mapDictionary.json`.
 * **📂 [AgentsVisualization](./AgentsVisualization)**
-    Proyecto en WebGL que visualiza el modelo de agentes aleatorios con HTML/JS en lugar de la visualización estándar de Mesa.
-* **📂 [mesaExamples](./mesaExamples)**
-    Ejemplos básicos de Mesa, incluyendo el modelo aleatorio (Random Model), el incendio forestal (Forest Fire) y el modelo de la ciudad (City Model).
-* **📂 [CompetitionSite](./CompetitionSite)**
-    Recursos sobre la competencia del curso.
+    Visualización 3D de la simulación en WebGL.
+    * **📂 [Server](./AgentsVisualization/Server)**: servidor en Flask que conecta el modelo de Mesa con WebGL.
+    * **📂 [visualization](./AgentsVisualization/visualization)**: página y código del cliente WebGL.
+    * **📂 [libs](./AgentsVisualization/libs)**: librerías de matrices, cámara, luces, objetos 3D y carga de modelos OBJ.
+    * **📂 [assets](./AgentsVisualization/assets)**: shaders y texturas.
 
 ---
 
