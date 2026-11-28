@@ -1,32 +1,11 @@
-from mesa.discrete_space import CellAgent, FixedAgent
-
-class Car(CellAgent):
-    """
-    Agent that moves randomly.
-    """
-    def __init__(self, model, cell):
-        """
-        Creates a new random agent.
-        Args:
-            model: Model reference for the agent
-            cell: The initial position of the agent
-        """
-        super().__init__(model)
-        self.cell = cell
-
-    def step(self):
-        """ 
-        Determines the new direction it will take, and then moves
-        """
-        pass
+from mesa.discrete_space import FixedAgent
 
 class Traffic_Light(FixedAgent):
     """
     Traffic light. Where the traffic lights are in the grid.
     """
     #& crea un semáforo
-    #in: el modelo, su celda, si empieza en verde y cada cuántos steps cambia de color
-    #out: nada
+    #in: el modelo, su celda, si empieza en verde y cada cuántos steps cambia de color. out: nada
     def __init__(self, model, cell, state = False, timeToChange = 10):
         super().__init__(model)
         self.cell = cell
