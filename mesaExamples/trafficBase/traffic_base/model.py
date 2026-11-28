@@ -1,6 +1,7 @@
 from mesa import Model
 from mesa.discrete_space import OrthogonalMooreGrid
 from .agent import *
+from .car import Car
 from .graph import matrizEstados, inferirDireccionSemaforo
 import json
 
@@ -87,8 +88,21 @@ class CityModel(Model):
         #matriz de estados S
         self.estados = matrizEstados(self.static_map, (self.width, self.height))
 
+        #coches que ya llegaron a su destino
+        self.cochesLlegaron = 0
+
         self.running = True
 
+    #& crea un coche en una celda con un destino, sin destino elige uno al azar
+    #in: la celda donde aparece el coche y su destino (opcional)
+    #out: el coche creado
+    def crearCoche(self, celda, destino=None):
+        if destino is None:
+            destino = self.random.choice(self.destinations)
+        return Car(self, celda, destino)
+
     #& avanza el modelo un step
+    #in: nada
+    #out: nada
     def step(self):
         self.agents.shuffle_do("step")
